@@ -16,17 +16,9 @@
     margin-bottom: 1em; /* Margen inferior del encabezado */
 }
 
-#introduccion p, #introduccion ul {
-    margin-bottom: 1.5em; /* Margen inferior de los párrafos y listas */
-}
-
-#introduccion ul {
-    list-style-type: disc; /* Estilo de lista */
-    padding-left: 20px; /* Espaciado de la lista */
-}
-
-#introduccion ul li {
-    margin-bottom: 0.5em; /* Margen inferior de los elementos de la lista */
+#introduccion p {
+    margin-bottom: 1.5em; /* Margen inferior del párrafo */
+    font-size: 1.1em; /* Tamaño de fuente del párrafo */
 }
 
 #introduccion strong {
