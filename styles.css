@@ -1,39 +1,11 @@
-/* Introduction Section Styles */
-#introduccion {
-    background-color: #e3f2fd; /* Fondo azul claro */
-    color: #333; /* Color de texto */
-    padding: 3em 1em; /* Espaciado interno */
-    text-align: left; /* Alineación del texto */
-}
-
-#introduccion .content {
-    max-width: 800px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrar el contenido */
-}
-
-#introduccion h2 {
-    color: #007BFF; /* Color del encabezado */
-    margin-bottom: 1em; /* Margen inferior del encabezado */
-}
-
-#introduccion p {
-    margin-bottom: 1.5em; /* Margen inferior del párrafo */
-    font-size: 1.1em; /* Tamaño de fuente del párrafo */
-}
-
-#introduccion strong {
-    color: #0056b3; /* Color de los textos en negrita */
-}
-
-
-/* Reset CSS */
+/* Reset CSS para eliminar estilos por defecto */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -41,178 +13,261 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+/* Estilos del encabezado */
 header {
-    background: #007BFF;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+    background: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 1em 0; /* Relleno superior e inferior */
+    text-align: center; /* Alineación centrada del texto */
+    position: sticky; /* El encabezado se pega en la parte superior al hacer scroll */
+    top: 0; /* Posición superior del encabezado */
+    z-index: 1000; /* Z-index alto para asegurar que el encabezado esté por encima del contenido */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2em;
+    animation: slide-in 1s ease-out; /* Animación de entrada deslizante */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centrar los elementos del menú */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 1em;
+    margin: 0 1em; /* Margen entre los elementos del menú */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave del color */
 }
 
-/* Section Styles */
+nav ul li a:hover {
+    color: #ffdd57; /* Color de los enlaces al pasar el ratón */
+}
+
+/* Estilos de las secciones */
 .section {
-    padding: 3em 1em;
-    text-align: center;
+    padding: 3em 1em; /* Relleno superior e inferior */
+    text-align: center; /* Alineación centrada del texto */
+    animation: fade-in 1s ease-out; /* Animación de desvanecimiento */
 }
 
 .section h2 {
     margin-bottom: 1em;
-    color: #007BFF;
+    color: #007BFF; /* Color azul para los encabezados */
 }
 
 .section p {
     margin-bottom: 2em;
 }
 
-/* Banner Image */
+/* Imagen del banner */
 .banner-img {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
-/* Services Styles */
+/* Estilos de los servicios */
 .services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Centrar los elementos del servicio */
 }
 
 .service-item {
     background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1em;
     padding: 2em;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
+    flex: 1 1 200px; /* Flexibilidad para adaptarse a diferentes tamaños de pantalla */
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    text-align: center; /* Alineación centrada del texto */
 }
 
 .service-item i {
     font-size: 2em;
-    color: #007BFF;
+    color: #007BFF; /* Color azul para los íconos */
     margin-bottom: 0.5em;
 }
 
-.service-item h3 {
-    margin-bottom: 0.5em;
-    color: #007BFF;
+.service-item:hover {
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el ratón */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
 }
 
-/* Store Styles */
+/* Estilos de la tienda en línea */
 .store {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Centrar los productos */
 }
 
 .product {
     background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1em;
     padding: 1em;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
+    flex: 1 1 200px; /* Flexibilidad para adaptarse a diferentes tamaños de pantalla */
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    text-align: center; /* Alineación centrada del texto */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el ratón */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
 }
 
 .product img {
     width: 100%;
     height: auto;
-    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-top: 0.5em;
+    color: #007BFF; /* Color azul para los encabezados */
 }
 
 .product button {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    font-size: 1em;
+    background: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 0.5em 1em; /* Relleno interno */
     border-radius: 5px;
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
+    transition: background 0.3s; /* Transición suave del color de fondo */
 }
 
 .product button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Color de fondo al pasar el ratón */
 }
 
-/* Contact Form Styles */
-form {
+/* Estilos de la sección de contacto */
+.contact-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Centrar los elementos de contacto */
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.info-item {
+    margin: 1em;
+    text-align: center; /* Alineación centrada del texto */
+}
+
+.info-item i {
+    font-size: 2em;
+    color: #007BFF; /* Color azul para los íconos */
+}
+
+.info-item p {
+    margin-top: 0.5em;
+}
+
+.info-item a {
+    color: #007BFF; /* Color azul para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.info-item a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos del formulario de contacto */
+form {
+    background: #fff;
+    padding: 2em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 form label {
-    margin: 0.5em 0 0.2em 0;
-}
-
-form input, form textarea, form button {
-    margin-bottom: 1em;
-    padding: 0.5em;
-    width: 80%;
-    max-width: 400px;
+    display: block;
+    margin-bottom: 0.5em;
+    color: #007BFF; /* Color azul para las etiquetas */
 }
 
 form input, form textarea {
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 form button {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    background: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 0.5em 1em; /* Relleno interno */
     border-radius: 5px;
+    cursor: pointer; /* Cursor de mano al pasar el ratón */
+    transition: background 0.3s; /* Transición suave del color de fondo */
 }
 
 form button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Color de fondo al pasar el ratón */
 }
 
-/* Footer Styles */
+/* Estilos de las redes sociales */
+.social-media {
+    margin-top: 2em;
+}
+
+.social-icon {
+    font-size: 1.5em;
+    color: #007BFF; /* Color azul para los íconos */
+    margin: 0 0.5em;
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+.social-icon:hover {
+    color: #ffdd57; /* Color al pasar el ratón */
+}
+
+/* Estilos del pie de página */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 1em 0; /* Relleno superior e inferior */
+    text-align: center; /* Alineación centrada del texto */
+    margin-top: 2em;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .services, .store {
-        flex-direction: column;
-        align-items: center;
+/* Animaciones con keyframes */
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%); /* Desde fuera de la vista hacia abajo */
+        opacity: 0; /* Transparencia completa */
     }
-    
-    nav ul li {
-        display: block;
-        margin-bottom: 1em;
+    to {
+        transform: translateY(0); /* En su posición original */
+        opacity: 1; /* Opacidad completa */
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0; /* Transparencia completa */
+    }
+    to {
+        opacity: 1; /* Opacidad completa */
     }
 }
