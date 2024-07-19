@@ -60,12 +60,12 @@ nav ul li a:hover {
 }
 
 .section h2 {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     color: #007BFF; /* Color azul para los encabezados */
 }
 
 .section p {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 /* Imagen del banner */
